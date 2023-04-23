@@ -1,8 +1,6 @@
 import PropTypes from "prop-types"
 import classes from "./style.module.css"
 
-console.log(classes)
-
 function WInput({ type = "text", appendText, value, onChange }) {
 
 
