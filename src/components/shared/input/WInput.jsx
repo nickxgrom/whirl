@@ -7,14 +7,14 @@ function WInput({ type = "text", appendText, value, onChange }) {
 
 
     return (
-        <div className={classes.wInput}>
+        <div className={`w-input ${classes.wInput} ${appendText ? classes.hasPostfix : ''}`}>
             <input
                 type={type}
                 value={value}
                 onChange={onChange}
                 className={classes.appearanceNone}
             />
-            <div className="icon"></div>
+            <span className={classes.appendText}>{ appendText }</span>
         </div>
     )
 }

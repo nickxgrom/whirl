@@ -8,10 +8,27 @@
     -moz-appearance: textfield;
 }
 
+.wInput {
+    position: relative;
+}
+
 .wInput input {
+    box-sizing: border-box;
     font-size: .875rem;
     padding: 8px;
     border-radius: 4px;
     border: 1px solid var(--main-text-color);
     color: var(--main-text-color);
+}
+
+.appendText {
+    position: absolute;
+    right: 8px;
+    color: var(--black-04);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hasPostfix input {
+    padding-right: 32px;
 }
