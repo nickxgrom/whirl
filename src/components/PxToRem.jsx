@@ -48,7 +48,7 @@ function PxToRem() {
     return (
         <div className="section-card">
             <div className="section-title">Px to rem</div>
-            <div className="section_px-to-rem_flex">
+            <div className="d-flex justify-between gap-2">
                 <WInput
                     value={pxValue}
                     onChange={handlePxChange}

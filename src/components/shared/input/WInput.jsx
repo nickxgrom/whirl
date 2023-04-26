@@ -2,17 +2,14 @@ import PropTypes from "prop-types"
 import classes from "./style.module.css"
 
 function WInput({ type = "text", appendText, value, onChange }) {
-
-
     return (
-        <div className={`w-input ${classes.wInput} ${appendText ? classes.hasPostfix : ''}`}>
+        <div className={classes.wInput}>
             <input
                 type={type}
                 value={value}
                 onChange={onChange}
-                className={classes.appearanceNone}
             />
-            <span className={classes.appendText}>{ appendText }</span>
+            <div>{ appendText }</div>
         </div>
     )
 }
