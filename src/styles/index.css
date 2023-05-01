@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: "Roboto";
     src: url("../assets/Roboto-Regular.ttf");
@@ -16,62 +20,51 @@
 
 html {
     width: 380px;
-
 }
 
 body {
-    margin: 0;
-    background: var(--main-background);
-    color: var(--main-text-color);
-    width: 380px;
+    @apply
+    m-0
+    bg-wh-main-bg
+    text-wh-main-text-color
+    w-[380px]
+    box-border;
 
-    /*expected height*/
-    /*---------------*/
-    /*height: 600px;*/
-
-    /*dev styles*/
-    /*---------------*/
-    /*border: 1px solid black;*/
-    /*position: absolute;*/
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
-    box-sizing: border-box;
 }
 
 .header-title {
-    margin: 8px 16px 4px 16px;
-    font-size: 1.25rem;
+    @apply
+    mt-2
+    mb-2
+    mx-4
+    text-lg;
 }
 
 .hr {
-    height: 1px;
-    background: var(--main-text-color);
-    width: 100%;
+    @apply
+    bg-wh-main-text-color
+    h-px
+    bg-wh-main-text-color
+    w-full;
 }
 
 .container {
-    margin: 12px 16px;
+    @apply
+    py-3
+    px-4;
 }
 
 .section-title {
-    padding-bottom: 8px;
+    @apply
+    pb-2
 }
 
 .section-card {
-    background: var(--main-card-background);
-    border-radius: 4px;
-    padding: 8px 16px 12px 16px;
-    margin-bottom: 12px;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.gap-2 {
-    gap: 8px;
+    @apply
+    bg-wh-card-bg
+    rounded
+    pt-2
+    pb-3
+    px-4
+    mb-3;
 }
