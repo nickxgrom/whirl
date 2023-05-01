@@ -54,6 +54,7 @@ function PxToRem() {
                     onChange={handlePxChange}
                     type="number"
                     appendText="px"
+                    copy
                 />
                 <img src="../../public/swap-horizontal.svg" alt=""/>
                 <WInput
@@ -61,12 +62,14 @@ function PxToRem() {
                     onChange={handleRemChange}
                     type="number"
                     appendText="rem"
+                    copy
                 />
                 <WInput
                     value={baseValue}
                     onChange={handleBaseChange}
                     type="number"
                     appendText="base"
+                    copy
                 />
             </div>
         </div>

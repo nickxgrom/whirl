@@ -1,4 +1,5 @@
 .wInput {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -25,4 +26,21 @@
 
 .wInput input[type=number] {
     -moz-appearance: textfield;
+}
+
+.copyIcon {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+.appendText:hover .copyIcon {
+    display: block;
+}
+
+.appendText:hover .text {
+    visibility: hidden;
 }
