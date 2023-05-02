@@ -37,6 +37,10 @@
     transform: translateY(-50%);
 }
 
+.appendText {
+    user-select: none;
+}
+
 .appendText:hover .copyIcon {
     display: block;
 }

@@ -69,7 +69,6 @@ function PxToRem() {
                     onChange={handleBaseChange}
                     type="number"
                     appendText="base"
-                    copy
                 />
             </div>
         </div>
