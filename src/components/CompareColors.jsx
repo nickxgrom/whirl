@@ -19,13 +19,37 @@ function CompareColors({}) {
         setColors(newColors)
     }
 
+    function computeColorType(value) {
+        const hexRegex = /^#?(\w{3}){1,2}$/
+        const rgbRegex = /^#?(\d{1,3}(,|\s)?){3}$/
+        if (value.startsWith("#")) {
+            value = value.split("#")[1]
+        }
+        if (hexRegex.test(value)) {
+            return {
+                type: "hex",
+                value
+            }
+        } else if (rgbRegex.test(value)) {
+
+            return {
+                type: "rgb",
+                value
+            }
+        } else return {
+            type: "unkwn",
+            value
+        }
+    }
+
     function handleInput(e, id) {
+        const { type, value } = computeColorType(e.target.value) || {}
         const newColors = {
             ...colors,
             [`color${id}`]: {
                 id: id,
-                type: "hex",
-                color: e.target.value
+                type: type,
+                color: value
             }
         }
         setColors(newColors)
