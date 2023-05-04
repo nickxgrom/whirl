@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import classes from "./style.module.css"
 
-function WInput({type = "text", appendText, value, onChange, copy}) {
+function WInput({type = "text", appendText, value, onChange, copy, close, onClose}) {
     function handleCopyClick() {
         navigator.clipboard.writeText(value)
     }
@@ -23,6 +23,18 @@ function WInput({type = "text", appendText, value, onChange, copy}) {
 
     return (
         <div className={classes.wInput}>
+            { close &&
+                <div
+                    onClick={onClose}
+                    className={classes.close}
+                >
+                    <img
+                        src="../../../../public/close-circle-outline.svg"
+                        width="20"
+                        height="20"
+                    />
+                </div>
+            }
             <input
                 type={type}
                 value={value}
