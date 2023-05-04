@@ -3,8 +3,8 @@ import {useState} from "react";
 
 function CompareColors({}) {
     const [colors, setColors] = useState({
-        color0: { id: 0, type: "hex", color: "" },
-        color1: { id: 1, type: "rgb", color: "" },
+        color0: { id: 0, type: "hex", value: "" },
+        color1: { id: 1, type: "rgb", value: "" },
     })
 
     const [counter, setCounter] = useState(2)
@@ -15,7 +15,7 @@ function CompareColors({}) {
             [`color${counter}`]: {
                 id: counter,
                 type: "hex",
-                color: ""
+                value: ""
             }
         }
         setCounter(counter + 1)
@@ -48,7 +48,7 @@ function CompareColors({}) {
             [`color${id}`]: {
                 id: id,
                 type: type,
-                color: value
+                value
             }
         }
         setColors(newColors)
@@ -72,7 +72,7 @@ function CompareColors({}) {
         <WInput
             key={colors[color].id}
             appendText={colors[color].type}
-            value={colors[color].color}
+            value={colors[color].value}
             onChange={(e) => (handleInput(e, colors[color].id))}
             copy
             close={Object.keys(colors).length > 2}
