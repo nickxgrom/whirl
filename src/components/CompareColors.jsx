@@ -2,9 +2,12 @@ import WInput from "./shared/input/WInput.jsx";
 import {useState} from "react";
 
 function CompareColors({}) {
-    const [colors, setColors] = useState({})
+    const [colors, setColors] = useState({
+        color0: { id: 0, type: "hex", color: "" },
+        color1: { id: 1, type: "rgb", color: "" },
+    })
 
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(2)
 
     function addColor() {
         const newColors = {
@@ -33,7 +36,7 @@ function CompareColors({}) {
                 value: value.includes("#") ? value.split("#")[1] : value
             }
         } else return {
-            type: "unkwn",
+            type: "???",
             value: value.includes("#") ? value.split("#")[1] : value
         }
     }
@@ -51,12 +54,29 @@ function CompareColors({}) {
         setColors(newColors)
     }
 
-    const inputs = Object.keys(colors).map((color, index) =>
+    function handleClose(id) {
+        let newColors = {}
+        for (let key in colors) {
+            if (colors[key].id !== id) {
+                newColors = {
+                    ...newColors,
+                    [key]: colors[key]
+                }
+            }
+        }
+
+        setColors(newColors)
+    }
+
+    const inputs = Object.keys(colors).map(color =>
         <WInput
             key={colors[color].id}
             appendText={colors[color].type}
             value={colors[color].color}
             onChange={(e) => (handleInput(e, colors[color].id))}
+            copy
+            close={Object.keys(colors).length > 2}
+            onClose={ () => handleClose(colors[color].id) }
         />
     )
 
