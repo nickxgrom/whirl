@@ -1,4 +1,4 @@
-import WInput from "./shared/input/WInput.jsx";
+import WhInput from "./shared/input/WhInput.jsx";
 import {useState} from "react";
 
 function CompareColors({}) {
@@ -69,7 +69,7 @@ function CompareColors({}) {
     }
 
     const inputs = Object.keys(colors).map(key =>
-        <WInput
+        <WhInput
             key={colors[key].id}
             appendText={colors[key].type}
             value={colors[key].value}

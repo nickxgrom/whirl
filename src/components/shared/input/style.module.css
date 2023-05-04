@@ -1,4 +1,4 @@
-.wInput {
+.WhInput {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     border-radius: 4px;
 }
 
-.wInput input {
+.WhInput input {
     width: 100%;
     outline: none;
     border: none;
@@ -18,13 +18,13 @@
     margin-right: 8px;
 }
 
-.wInput input::-webkit-outer-spin-button,
-.wInput input::-webkit-inner-spin-button {
+.WhInput input::-webkit-outer-spin-button,
+.WhInput input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.wInput input[type=number] {
+.WhInput input[type=number] {
     -moz-appearance: textfield;
 }
 

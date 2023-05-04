@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import classes from "./style.module.css"
 
-function WInput({type = "text", appendText, value, onChange, copy, close, onClose}) {
+function WhInput({type = "text", appendText, value, onChange, copy, close, onClose}) {
     function handleCopyClick() {
         navigator.clipboard.writeText(value)
     }
@@ -22,7 +22,7 @@ function WInput({type = "text", appendText, value, onChange, copy, close, onClos
     }
 
     return (
-        <div className={classes.wInput}>
+        <div className={classes.WhInput}>
             { close &&
                 <div
                     onClick={onClose}
@@ -53,9 +53,9 @@ function WInput({type = "text", appendText, value, onChange, copy, close, onClos
     )
 }
 
-WInput.propTypes = {
+WhInput.propTypes = {
     type: PropTypes.string,
     appendText: PropTypes.string
 }
 
-export default WInput
+export default WhInput

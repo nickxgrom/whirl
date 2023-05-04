@@ -1,4 +1,4 @@
-import WInput from "./shared/input/WInput.jsx";
+import WhInput from "./shared/input/WhInput.jsx";
 import {useState} from "react";
 
 function PxToRem() {
@@ -49,7 +49,7 @@ function PxToRem() {
         <div className="section-card">
             <div className="section-title">Px to rem</div>
             <div className="flex justify-between gap-2">
-                <WInput
+                <WhInput
                     value={pxValue}
                     onChange={handlePxChange}
                     type="number"
@@ -57,14 +57,14 @@ function PxToRem() {
                     copy
                 />
                 <img src="../../public/swap-horizontal.svg" alt=""/>
-                <WInput
+                <WhInput
                     value={remValue}
                     onChange={handleRemChange}
                     type="number"
                     appendText="rem"
                     copy
                 />
-                <WInput
+                <WhInput
                     value={baseValue}
                     onChange={handleBaseChange}
                     type="number"
