@@ -21,24 +21,20 @@ function CompareColors({}) {
 
     function computeColorType(value) {
         const hexRegex = /^#?(\w{3}){1,2}$/
-        const rgbRegex = /^#?(\d{1,3}(,|\s)?){3}$/
-        if (value.startsWith("#")) {
-            value = value.split("#")[1]
-        }
+        const rgbRegex = /^#?(\d{1,3},\s?){2}\d{1,3}$/
         if (hexRegex.test(value)) {
             return {
                 type: "hex",
-                value
+                value: value.includes("#") ? value : `#${value}`
             }
         } else if (rgbRegex.test(value)) {
-
             return {
                 type: "rgb",
-                value
+                value: value.includes("#") ? value.split("#")[1] : value
             }
         } else return {
             type: "unkwn",
-            value
+            value: value.includes("#") ? value.split("#")[1] : value
         }
     }
 
