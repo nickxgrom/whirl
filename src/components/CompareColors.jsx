@@ -68,15 +68,15 @@ function CompareColors({}) {
         setColors(newColors)
     }
 
-    const inputs = Object.keys(colors).map(color =>
+    const inputs = Object.keys(colors).map(key =>
         <WInput
-            key={colors[color].id}
-            appendText={colors[color].type}
-            value={colors[color].value}
-            onChange={(e) => (handleInput(e, colors[color].id))}
+            key={colors[key].id}
+            appendText={colors[key].type}
+            value={colors[key].value}
+            onChange={(e) => (handleInput(e, colors[key].id))}
             copy
             close={Object.keys(colors).length > 2}
-            onClose={ () => handleClose(colors[color].id) }
+            onClose={ () => handleClose(colors[key].id) }
         />
     )
 
