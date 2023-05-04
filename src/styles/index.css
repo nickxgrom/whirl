@@ -56,7 +56,13 @@ body {
 
 .section-title {
     @apply
-    pb-2
+    pb-2;
+
+    .action-icon {
+        @apply
+        cursor-pointer;
+
+    }
 }
 
 .section-card {

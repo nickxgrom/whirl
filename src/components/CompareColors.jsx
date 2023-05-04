@@ -12,7 +12,7 @@ function CompareColors({}) {
             [`color${counter}`]: {
                 id: counter,
                 type: "hex",
-                color: "#ffffff"
+                color: ""
             }
         }
         setCounter(counter + 1)
@@ -62,12 +62,17 @@ function CompareColors({}) {
 
     return (
         <div className="section-card">
-            <div className="section-title">Compare colors</div>
+            <div className="section-title flex justify-between items-center">
+                Compare colors
+                <div
+                    className="action-icon"
+                    onClick={addColor}
+                >
+                    <img src="../../public/plus.svg" width="25"/>
+                </div>
+            </div>
             <div className="flex gap-2">
                 {inputs}
-            </div>
-            <div onClick={addColor}>
-                add color
             </div>
         </div>
     )
