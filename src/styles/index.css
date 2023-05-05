@@ -65,6 +65,26 @@ body {
     }
 }
 
+.color-input {
+    flex-basis: calc(50% - .25rem);
+}
+
+.color-bar {
+    @apply
+    mt-2
+    flex;
+
+    .color-block {
+        @apply
+        first:rounded-l
+        last:rounded-r;
+
+        width: 42px;
+        height: 42px;
+        background: aquamarine;
+    }
+}
+
 .section-card {
     @apply
     bg-wh-card-bg

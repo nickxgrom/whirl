@@ -70,6 +70,7 @@ function CompareColors({}) {
 
     const inputs = Object.keys(colors).map(key =>
         <WhInput
+            className="color-input"
             key={colors[key].id}
             appendText={colors[key].type}
             value={colors[key].value}
@@ -91,8 +92,16 @@ function CompareColors({}) {
                     <img src="../../public/plus.svg" width="25"/>
                 </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
                 {inputs}
+            </div>
+            <div className="color-bar">
+                { Object.values(colors).map(color => (
+                    <div
+                        className="color-block"
+                        key={color.id}
+                    />
+                )) }
             </div>
         </div>
     )

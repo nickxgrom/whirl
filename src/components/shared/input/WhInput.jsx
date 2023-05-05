@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import classes from "./style.module.css"
 
-function WhInput({type = "text", appendText, value, onChange, copy, close, onClose}) {
+function WhInput({type = "text", appendText, value, onChange, copy, close, onClose, className}) {
     function handleCopyClick() {
         navigator.clipboard.writeText(value)
     }
@@ -22,7 +22,7 @@ function WhInput({type = "text", appendText, value, onChange, copy, close, onClo
     }
 
     return (
-        <div className={classes.WhInput}>
+        <div className={`${classes.WhInput} ${className || ''}`}>
             { close &&
                 <div
                     onClick={onClose}
