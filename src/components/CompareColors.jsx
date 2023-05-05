@@ -1,5 +1,6 @@
 import WhInput from "./shared/input/WhInput.jsx";
-import {useState} from "react";
+import ColorBar from "./ColorBar.jsx";
+import {useEffect, useState} from "react";
 
 function CompareColors({}) {
     const [colors, setColors] = useState({
@@ -8,6 +9,22 @@ function CompareColors({}) {
     })
 
     const [counter, setCounter] = useState(2)
+    let [colorBarValues, setColorBarValues] = useState([])
+
+    useEffect(() => {
+        let newColorBarValues = []
+        Object.values(colors).forEach(color => {
+            if (!color.value) return
+
+            if (color.type === "hex") {
+                newColorBarValues.push(color.value)
+            } else if (color.type === "rgb") {
+                newColorBarValues.push(`rgb(${color.value})`)
+            }
+
+        })
+        setColorBarValues(newColorBarValues)
+    }, [colors])
 
     function addColor() {
         const newColors = {
@@ -95,14 +112,7 @@ function CompareColors({}) {
             <div className="flex flex-wrap gap-2">
                 {inputs}
             </div>
-            <div className="color-bar">
-                { Object.values(colors).map(color => (
-                    <div
-                        className="color-block"
-                        key={color.id}
-                    />
-                )) }
-            </div>
+            <ColorBar colors={colorBarValues}/>
         </div>
     )
 }
