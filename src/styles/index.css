@@ -7,15 +7,9 @@
     src: url("../assets/Roboto-Regular.ttf");
 }
 
-:root {
-    --main-background: #F0F0F0;
-    --main-card-background: #FFF;
-    --main-text-color: #424649;
-    --black-04: rgba(0, 0, 0, .4);
-}
-
 * {
     font-family: "Roboto", serif;
+    font-size: 16px;
 }
 
 html {

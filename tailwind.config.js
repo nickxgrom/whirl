@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "wh-main-bg": "#F0F0F0",
         // --main-background: #F0F0F0;
-        "wh-card-bg": "#FFF",
+        "wh-main-bg": "#F0F0F0",
         // --main-card-background: #FFF;
-        "wh-main-text-color": "#424649",
+        "wh-card-bg": "#FFF",
         // --main-text-color: #424649;
-        "wh-black-04": "rgba(0, 0, 0, .4)"
+        "wh-main-text-color": "#424649",
         // --black-04: rgba(0, 0, 0, .4);
+        "wh-black-04": "rgba(0, 0, 0, .4)"
       }
     },
   },

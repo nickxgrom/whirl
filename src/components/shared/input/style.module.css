@@ -1,18 +1,24 @@
 .WhInput {
+    @apply
+    rounded
+    border
+    border-solid
+    border-wh-main-text-color;
+
     position: relative;
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    border: 1px solid var(--main-text-color);
-    border-radius: 4px;
 }
 
 .WhInput input {
+    @apply
+    text-wh-main-text-color;
+
     width: 100%;
     outline: none;
     border: none;
     background: transparent;
-    color: var(--main-text-color);
     font-size: .875rem;
     padding: 0;
     margin-right: 8px;
