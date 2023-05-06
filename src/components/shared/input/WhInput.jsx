@@ -1,5 +1,7 @@
 import PropTypes from "prop-types"
 import classes from "./style.module.css"
+import {mdiCloseCircleOutline, mdiContentCopy} from "@mdi/js";
+import WhIcon from "../icon/WhIcon.jsx";
 
 function WhInput({type = "text", appendText, value, onChange, copy, close, onClose, className}) {
     function handleCopyClick() {
@@ -13,11 +15,7 @@ function WhInput({type = "text", appendText, value, onChange, copy, close, onClo
             className={classes.copyIcon}
             onClick={handleCopyClick}
         >
-            <img
-                src="../../../../public/content-copy.svg"
-                width="18px"
-                height="18px"
-            />
+            <WhIcon path={mdiContentCopy} />
         </div>
     }
 
@@ -28,11 +26,7 @@ function WhInput({type = "text", appendText, value, onChange, copy, close, onClo
                     onClick={onClose}
                     className={classes.close}
                 >
-                    <img
-                        src="../../../../public/close-circle-outline.svg"
-                        width="20"
-                        height="20"
-                    />
+                    <WhIcon path={mdiCloseCircleOutline}></WhIcon>
                 </div>
             }
             <input

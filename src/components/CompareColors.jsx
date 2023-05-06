@@ -1,6 +1,8 @@
 import WhInput from "./shared/input/WhInput.jsx";
 import ColorBar from "./ColorBar.jsx";
 import {useEffect, useState} from "react";
+import WhIcon from "./shared/icon/WhIcon.jsx";
+import {mdiPlus} from "@mdi/js"
 
 function CompareColors({}) {
     const [colors, setColors] = useState({
@@ -106,7 +108,10 @@ function CompareColors({}) {
                     className="action-icon"
                     onClick={addColor}
                 >
-                    <img src="../../public/plus.svg" width="25"/>
+                    <WhIcon
+                        className="w-5 h-5"
+                        path={mdiPlus}
+                    />
                 </div>
             </div>
             <div className="flex flex-wrap gap-2">

@@ -1,5 +1,7 @@
 import WhInput from "./shared/input/WhInput.jsx";
 import {useState} from "react";
+import {mdiSwapHorizontal} from "@mdi/js";
+import WhIcon from "./shared/icon/WhIcon.jsx";
 
 function PxToRem() {
     const [pxValue, setPxValue] = useState(0)
@@ -48,7 +50,7 @@ function PxToRem() {
     return (
         <div className="section-card">
             <div className="section-title">Px to rem</div>
-            <div className="flex justify-between gap-2">
+            <div className="flex justify-between items-center gap-2">
                 <WhInput
                     value={pxValue}
                     onChange={handlePxChange}
@@ -56,7 +58,11 @@ function PxToRem() {
                     appendText="px"
                     copy
                 />
-                <img src="../../public/swap-horizontal.svg" alt=""/>
+
+                <div>
+                    <WhIcon className="w-6 h-6" path={mdiSwapHorizontal} />
+                </div>
+
                 <WhInput
                     value={remValue}
                     onChange={handleRemChange}

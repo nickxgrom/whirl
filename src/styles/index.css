@@ -77,10 +77,9 @@ body {
     .color-block {
         @apply
         first:rounded-l
-        last:rounded-r;
-
-        width: 42px;
-        height: 42px;
+        last:rounded-r
+        w-20
+        h-8;
     }
 }
 
