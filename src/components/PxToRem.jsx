@@ -1,7 +1,7 @@
-import WhInput from "./shared/input/WhInput.jsx";
+import WhInput from "./shared/WhInput.jsx";
 import {useState} from "react";
 import {mdiSwapHorizontal} from "@mdi/js";
-import WhIcon from "./shared/icon/WhIcon.jsx";
+import WhIcon from "./shared/WhIcon.jsx";
 
 function PxToRem() {
     const [pxValue, setPxValue] = useState(0)

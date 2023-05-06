@@ -1,7 +1,7 @@
-import WhInput from "./shared/input/WhInput.jsx";
+import WhInput from "./shared/WhInput.jsx";
 import ColorBar from "./ColorBar.jsx";
 import {useEffect, useState} from "react";
-import WhIcon from "./shared/icon/WhIcon.jsx";
+import WhIcon from "./shared/WhIcon.jsx";
 import {mdiPlus} from "@mdi/js"
 
 function CompareColors({}) {

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
-import classes from "./style.module.css"
+import classes from "../../styles/whinput.module.css"
 import {mdiCloseCircleOutline, mdiContentCopy} from "@mdi/js";
-import WhIcon from "../icon/WhIcon.jsx";
+import WhIcon from "./WhIcon.jsx";
 
 function WhInput({type = "text", appendText, value, onChange, copy, close, onClose, className}) {
     function handleCopyClick() {

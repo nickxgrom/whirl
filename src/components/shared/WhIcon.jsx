@@ -1,4 +1,4 @@
-import classes from "./style.module.css"
+import classes from "../../styles/whicon.module.css"
 
 function WhIcon({path, className = ""}) {
     return (
